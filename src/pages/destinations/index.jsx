@@ -78,8 +78,9 @@ const Main = styled.main`
   color: white;
   padding: 160px 165px 0;
   height: 100vh;
-  background: url(${BgDestinationDesktop}) no-repeat ;
+  background: url(${BgDestinationDesktop}) no-repeat;
   background-size: cover;
+  overflow-y: hidden;
   @media (max-width: 1024px) {
     padding: 160px 60px 0;
   }
@@ -105,12 +106,12 @@ const Container = styled.div`
   padding: 40px 10px 0;
   img {
     width: 35%;
-    margin-top: 20px;
-    animation: starRotate 30s infinite ;
+    animation: starRotate 30s infinite;
   }
   @keyframes starRotate {
-    0%{transform:rotate(360deg)}
-   }
+    0% {
+      transform: rotate(360deg)    }
+  }
   @media (min-width: 1600px) {
     justify-content: space-around;
   }
@@ -123,6 +124,7 @@ const Container = styled.div`
 
     img {
       width: 60%;
+      height: 40%;
       margin-top: 40px;
     }
     @media (max-width: 500px) {
