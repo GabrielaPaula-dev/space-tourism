@@ -95,6 +95,9 @@ const Main = styled.main`
     background: url(${BgDestinationMobile}) no-repeat;
     background-size: cover;
   }
+  @media (min-height: 880px) {
+    height: 920px;
+  }
 `;
 const Container = styled.div`
   display: flex;
@@ -103,7 +106,11 @@ const Container = styled.div`
   img {
     width: 35%;
     margin-top: 20px;
+    animation: starRotate 30s infinite ;
   }
+  @keyframes starRotate {
+    0%{transform:rotate(360deg)}
+   }
   @media (min-width: 1600px) {
     justify-content: space-around;
   }

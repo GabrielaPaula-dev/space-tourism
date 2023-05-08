@@ -6,7 +6,7 @@ import { Logo, MenuHamburguer, Close } from "../../assets";
 const Header = () => {
   const pages = ["/", "Destination", "Crew", "Technology"];
   const subpages = ["", "Moon", "Commander", "Launch-Vehicle"];
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const handleOnChange = () => {
     setIsChecked(!isChecked);
   };
@@ -34,6 +34,9 @@ const Header = () => {
                 to={page == "/" ? "/" : `/${page}/${subpages[index]}`}
                 className={({ isActive }) =>
                   isActive ? "link-header active" : "link-header"
+                }
+                onClick={() =>
+                  isChecked ? setIsChecked(false) : setIsChecked(true)
                 }
               >
                 <span>0{index}</span> {page == "/" ? "home" : page}
@@ -105,7 +108,7 @@ const Nav = styled.nav`
 
   @media (max-width: 1024px) {
     width: 72%;
-    padding: 35px 0 0 60px;
+    padding: 35px 0 0 50px;
 
     .link-header {
       font-size: 14px;
@@ -122,9 +125,10 @@ const Nav = styled.nav`
     }
   }
 
-  @media (max-width: 688px) {
+  @media (max-width: 750px) {
     background-color: transparent;
     backdrop-filter: none;
+    transition: width 2s ease-in;
     .link-header:hover {
       border-bottom-color: none;
     }
@@ -138,10 +142,10 @@ const Nav = styled.nav`
     .list-links {
       display: none;
     }
-    .link-header{
+    .link-header {
       padding-bottom: 5px;
       margin-bottom: 30px;
-      width: 50%;
+      width: 70%;
     }
 
     #menu-hamburguer:checked ~ .list-links {
@@ -158,7 +162,15 @@ const Nav = styled.nav`
         position: fixed;
         z-index: 5;
         right: 0;
-
+        animation: openMenu 1s;
+        @keyframes openMenu {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 70%;
+          }
+        }
         label {
           width: 25%;
           margin-bottom: 30px;

@@ -39,7 +39,6 @@ const Main = styled.main`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
     padding: 200px 40px 50px;
     overflow-y: hidden;
     background: url(${BgHomeTablet});

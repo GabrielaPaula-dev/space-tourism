@@ -95,6 +95,7 @@ const Main = styled.main`
     padding: 200px 0 0 70px;
   }
   @media (max-width: 768px) {
+    padding: 180px 0 60px 0;
     height: 100%;
     background: url(${BgTechnologyTablet}) no-repeat;
     background-size: cover;
@@ -102,9 +103,11 @@ const Main = styled.main`
   @media (max-width: 500px) {
     padding: 100px 0 60px 0;
     text-align: center;
+    min-height: 100%;
     background: url(${BgTechnologyMobile}) no-repeat;
-    background-size: cover;
+    background-size:cover;
   }
+  
 `;
 const Container = styled.div`
   display: flex;
@@ -239,6 +242,7 @@ const Description = styled.p`
     width: 80%;
     margin: auto;
     line-height: 25px;
+    padding-bottom:100px;
   }
 `;
 
