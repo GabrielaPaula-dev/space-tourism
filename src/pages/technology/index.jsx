@@ -76,7 +76,7 @@ const Technology = ({ indice }) => {
           <Description>{info.description}</Description>
         </DivTexts>
         <picture style={{ marginLeft: "auto" }}>
-          <source srcSet={info.img.mobile} media="(max-width:800px)" />
+          <source srcSet={info.img.mobile} media="(max-width:950px)" />
           <img src={info.img.desktop} alt="Foto da tecnologia usada" />
         </picture>
       </Container>
@@ -91,10 +91,10 @@ const Main = styled.main`
   background: url(${BgTechnologyDesktop}) no-repeat;
   background-size: cover;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     padding: 200px 0 0 70px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     padding: 180px 0 60px 0;
     height: 100%;
     background: url(${BgTechnologyTablet}) no-repeat;
@@ -105,9 +105,8 @@ const Main = styled.main`
     text-align: center;
     min-height: 100%;
     background: url(${BgTechnologyMobile}) no-repeat;
-    background-size:cover;
+    background-size: cover;
   }
-  
 `;
 const Container = styled.div`
   display: flex;
@@ -115,12 +114,22 @@ const Container = styled.div`
   align-items: center;
   margin-top: 50px;
   img {
-    height: 50vh;
+    height: 45vh;
+  }
+  @media (min-width: 1700px) {
+    margin-top: 200px;
+    img {
+      height: 50vh;
+    }
   }
   @media (min-width: 1600px) {
     justify-content: space-around;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
+img{
+  height: 45vh;
+}  }
+  @media (max-width: 950px) {
     flex-direction: column;
     gap: 20px;
     img {
@@ -134,7 +143,13 @@ const Container = styled.div`
 const DivTexts = styled.div`
   width: 445px;
   margin-bottom: 15px;
-  @media (max-width: 768px) {
+  @media (min-width: 1700px) {
+    scale: 1.5;
+    margin-left: 140px;
+  }
+  @media (max-width: 1100px) {
+  }
+  @media (max-width: 950px) {
     order: 2;
     text-align: center;
   }
@@ -145,11 +160,17 @@ const DivTexts = styled.div`
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  @media (max-width: 768px) {
+  @media (min-width: 1700px) {
+    scale: 1.5;
+  }
+  @media (max-width: 950px) {
     flex-direction: row;
     gap: 30px;
     order: 1;
-    margin-top: 350px;
+    margin-top: 450px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 300px;
   }
   @media (max-width: 500px) {
     margin-top: 190px;
@@ -219,10 +240,10 @@ const Name = styled.h2`
   font-family: "Bellefair", serif;
   margin: 15px 0 20px;
   width: 150%;
-  @media (max-width: 1024px) {
-    font-size: 40px;
+  @media (max-width: 1100px) {
+    font-size: 35px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 950px) {
     width: 100%;
   }
   @media (max-width: 500px) {
@@ -242,7 +263,7 @@ const Description = styled.p`
     width: 80%;
     margin: auto;
     line-height: 25px;
-    padding-bottom:100px;
+    padding-bottom: 100px;
   }
 `;
 

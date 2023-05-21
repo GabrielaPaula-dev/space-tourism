@@ -77,12 +77,17 @@ const Destination = ({ indice }) => {
 const Main = styled.main`
   color: white;
   padding: 160px 165px 0;
-  height: 100vh;
+  min-height: 100vh;
   background: url(${BgDestinationDesktop}) no-repeat;
   background-size: cover;
-  overflow-y: hidden;
-  @media (max-width: 1024px) {
-    padding: 160px 60px 0;
+  @media (min-width: 1500px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 250px;
+    gap: 200px;
+  }
+  @media (max-width: 1280px) {
+    padding: 160px 40px 0;
   }
   @media (max-width: 768px) {
     padding: 160px 70px 50px;
@@ -96,26 +101,34 @@ const Main = styled.main`
     background: url(${BgDestinationMobile}) no-repeat;
     background-size: cover;
   }
-  @media (min-height: 880px) {
-    height: 920px;
-  }
 `;
 const Container = styled.div`
   display: flex;
+  gap:100px;
   justify-content: space-between;
   padding: 40px 10px 0;
   img {
-    width: 35%;
+    scale: 0.85;
     animation: starRotate 30s infinite;
   }
   @keyframes starRotate {
     0% {
-      transform: rotate(360deg)    }
+      transform: rotate(360deg);
+    }
   }
   @media (min-width: 1600px) {
     justify-content: space-around;
+    img{
+      scale: 1.2;
+    }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1280px) {
+    justify-content: space-around;
+    img{
+      scale:0.7;
+    }
+  }
+  @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -134,6 +147,10 @@ const Container = styled.div`
 `;
 const DivTexts = styled.div`
   width: 445px;
+  @media (min-width: 1550px) {
+    width: 500px;
+    scale:1.4;
+  }
   @media (max-width: 768px) {
     width: 100%;
   }

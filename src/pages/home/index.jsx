@@ -23,7 +23,7 @@ const Main = styled.main`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 200px 165px 80px;
   background: url(${BgHomeDesktop});
   background-size: cover;
@@ -31,21 +31,25 @@ const Main = styled.main`
   @media (min-width: 1600px) {
     justify-content: space-around;
   }
-
-  @media (max-width: 1024px) {
-    padding: 90px 70px 40px;
+  @media (max-width: 1400px) {
+    gap: 100px;
+    padding-left: 100px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
+    padding: 120px 70px 40px;
+  }
+  @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 200px 40px 50px;
-    overflow-y: hidden;
-    background: url(${BgHomeTablet});
+    background: url(${BgHomeTablet}) no-repeat;
+    background-size: cover;
+    gap: 50px;
   }
   @media (max-width: 500px) {
     padding: 100px 40px 30px;
-    background: url(${BgHomeMobile});
+    background: url(${BgHomeMobile}) no-repeat;
     background-size: cover;
   }
 `;
@@ -57,6 +61,9 @@ const H4 = styled.h4`
   text-transform: uppercase;
   color: #ffffff;
 
+  @media (min-width: 1600px) {
+    font-size: 40px;
+  }
   @media (max-width: 768px) {
     font-size: 20px;
   }
@@ -72,7 +79,9 @@ const H1 = styled.h1`
   margin: 24px 0 30px;
   text-transform: uppercase;
   color: #ffffff;
-
+  @media (min-width: 1600px) {
+    font-size: 200px;
+  }
   @media (max-width: 768px) {
     margin-bottom: 0;
   }
@@ -87,7 +96,11 @@ const P = styled.p`
   line-height: 32px;
   color: #ffffff;
   font-weight: 200;
-
+  @media (min-width: 1600px) {
+    font-size: 30px;
+    width: 600px;
+    line-height: 45px;
+  }
   @media (max-width: 500px) {
     font-size: 15px;
     width: 100%;
@@ -104,26 +117,25 @@ const ButtonExplore = styled.button`
   background-color: #f0f0f0;
   transition: 2s;
   border: none;
-  align-self: flex-end;
 
   :hover {
     -webkit-box-shadow: 0px 0px 130px 26px rgba(176, 176, 176, 1);
     -moz-box-shadow: 0px 0px 130px 26px rgba(176, 176, 176, 1);
     box-shadow: 0px 0px 130px 26px rgba(176, 176, 176, 1);
   }
-  @media (max-width: 1024px) {
-    align-self: center;
+  @media (min-width: 1500px) {
+    transform: scale(1.3);
+  }
+  @media (max-width: 1200px) {
+    transform: scale(0.9);
   }
   @media (max-width: 768px) {
-    padding: 75px 35px;
+    padding: 80px 40px;
     font-size: 25px;
-    margin-top: 90px;
-  }
-  @media (min-height: 845px) {
-    margin-bottom: 90px;
+    margin-top: 40px;
   }
   @media (max-width: 500px) {
-    margin-top: 10px;
+    margin-top: 0;
   }
 `;
 

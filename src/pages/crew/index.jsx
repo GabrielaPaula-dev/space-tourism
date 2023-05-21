@@ -70,10 +70,10 @@ const Main = styled.main`
   background: url(${BgCrewDesktop}) no-repeat;
   background-size: cover;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     padding: 200px 0 0 70px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     padding: 200px 40px 0;
     height: 100%;
     background: url(${BgCrewTablet}) no-repeat;
@@ -94,10 +94,21 @@ const Container = styled.div`
   img {
     height: 67vh;
   }
-  @media (min-width: 1600px) {
+  @media (min-width: 1800px) {
     justify-content: space-around;
+    gap:100px;
+    img {
+      scale:1.1;
+      margin-top:150px;
+    }
   }
-  @media (max-width: 768px) {
+  @media (min-width: 1500px) {
+    img{
+      scale: 0.9;
+    }
+  }
+
+  @media (max-width: 850px) {
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -113,7 +124,9 @@ const Container = styled.div`
 `;
 const DivTexts = styled.div`
   width: 570px;
-
+  @media (min-width: 1800px) {
+    scale: 1.6;
+  }
   .link-crew {
     display: inline-block;
     width: 12px;
@@ -129,9 +142,9 @@ const DivTexts = styled.div`
   .link-crew:hover {
     background-color: #999999;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     width: 100%;
-    .link-crew{
+    .link-crew {
       margin: 30px 8px 40px;
     }
   }
@@ -180,7 +193,7 @@ const Description = styled.p`
   opacity: 0.8;
   width: 75%;
   margin-bottom: 40px;
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     margin: auto;
   }
   @media (max-width: 500px) {
