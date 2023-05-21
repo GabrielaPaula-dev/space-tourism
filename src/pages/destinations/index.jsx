@@ -80,7 +80,8 @@ const Main = styled.main`
   min-height: 100vh;
   background: url(${BgDestinationDesktop}) no-repeat;
   background-size: cover;
-  @media (min-width: 1500px) {
+  overflow-y: hidden;
+  @media (min-width: 1600px) {
     display: flex;
     flex-direction: column;
     padding-top: 250px;

@@ -123,7 +123,7 @@ const ButtonExplore = styled.button`
     -moz-box-shadow: 0px 0px 130px 26px rgba(176, 176, 176, 1);
     box-shadow: 0px 0px 130px 26px rgba(176, 176, 176, 1);
   }
-  @media (min-width: 1500px) {
+  @media (min-width: 1600px) {
     transform: scale(1.3);
   }
   @media (max-width: 1200px) {
