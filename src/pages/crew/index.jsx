@@ -102,6 +102,13 @@ const Container = styled.div`
       margin-top: 150px;
     }
   }
+  
+  @media (max-width: 1300px) {
+    img {
+    max-height: 350px;
+    margin-right: 30px;
+  }
+  }
   @media (max-width: 850px) {
     flex-direction: column;
     text-align: center;
