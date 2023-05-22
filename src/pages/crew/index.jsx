@@ -92,22 +92,16 @@ const Container = styled.div`
   min-width: 75%;
   align-items: center;
   img {
-    height: 67vh;
+    max-height: 480px;
   }
   @media (min-width: 1800px) {
     justify-content: space-around;
-    gap:100px;
+    gap: 100px;
     img {
-      scale:1.1;
-      margin-top:150px;
+      min-height: 600px;
+      margin-top: 150px;
     }
   }
-  @media (min-width: 1500px) {
-    img{
-      scale: 0.9;
-    }
-  }
-
   @media (max-width: 850px) {
     flex-direction: column;
     text-align: center;
